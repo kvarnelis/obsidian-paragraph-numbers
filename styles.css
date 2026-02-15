@@ -1,0 +1,9 @@
+/* Paragraph-number gutter */
+.cm-paragraph-number .cm-gutterElement {
+  font-size: 11px;
+  color: var(--text-faint);
+  padding-right: 8px;
+  text-align: right;
+  min-width: 20px;
+  font-variant-numeric: tabular-nums;
+}

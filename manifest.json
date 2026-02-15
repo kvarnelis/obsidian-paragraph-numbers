@@ -1,0 +1,9 @@
+{
+  "id": "paragraph-numbers",
+  "name": "Paragraph Numbers",
+  "version": "1.0.0",
+  "minAppVersion": "1.0.0",
+  "description": "Replaces line numbers with paragraph numbers in the editor gutter—useful for long-form prose.",
+  "author": "Kazys Varnelis",
+  "isDesktopOnly": false
+}
