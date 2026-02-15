@@ -2,6 +2,8 @@
 
 Adds paragraph numbers to the editor gutter, replacing line numbers with something more useful for long-form prose writing.
 
+![Screenshot](screenshot.png)
+
 ## What it does
 
 A **paragraph** is a contiguous block of non-blank content lines. The plugin numbers each paragraph sequentially in the gutter, skipping:
