@@ -132,9 +132,42 @@ const paragraphGutter = gutter({
 });
 
 // ── Plugin class ─────────────────────────────────────────────────
+const DEFAULT_SETTINGS = { enabled: true };
+
 class ParagraphNumbersPlugin extends Plugin {
   async onload() {
+    await this.loadSettings();
     this.registerEditorExtension([paragraphMapField, paragraphGutter]);
+    this.applyEnabledClass();
+
+    this.addCommand({
+      id: "toggle-paragraph-numbers",
+      name: "Toggle paragraph numbers",
+      callback: async () => {
+        this.settings.enabled = !this.settings.enabled;
+        await this.saveSettings();
+        this.applyEnabledClass();
+      },
+    });
+  }
+
+  onunload() {
+    document.body.classList.remove("paragraph-numbers-hidden");
+  }
+
+  async loadSettings() {
+    this.settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData());
+  }
+
+  async saveSettings() {
+    await this.saveData(this.settings);
+  }
+
+  applyEnabledClass() {
+    document.body.classList.toggle(
+      "paragraph-numbers-hidden",
+      !this.settings.enabled,
+    );
   }
 }
 

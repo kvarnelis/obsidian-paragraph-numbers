@@ -38,6 +38,11 @@ For the cleanest writing view, go to **Settings → Editor** and:
 - Turn off **Line numbers** (the built-in line numbers are redundant with paragraph numbers)
 - Set **Properties in document** to "Hidden" (removes the YAML frontmatter panel)
 
+## Toggle visibility
+
+Run **Toggle paragraph numbers** from the Command Palette to show or hide the
+gutter without disabling the plugin. The preference is retained for the vault.
+
 ## How it works
 
 Uses CodeMirror 6's gutter API (`StateField` + custom `gutter` + `GutterMarker`). No build step — the plugin is a single plain JavaScript file.

@@ -7,3 +7,8 @@
   min-width: 20px;
   font-variant-numeric: tabular-nums;
 }
+
+/* Toggle: hide paragraph-number gutter when disabled via command palette */
+body.paragraph-numbers-hidden .cm-paragraph-number {
+  display: none !important;
+}
