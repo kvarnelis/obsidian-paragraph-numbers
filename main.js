@@ -141,7 +141,7 @@ class ParagraphNumbersPlugin extends Plugin {
     this.applyEnabledClass();
 
     this.addCommand({
-      id: "toggle-paragraph-numbers",
+      id: "toggle",
       name: "Toggle paragraph numbers",
       callback: async () => {
         this.settings.enabled = !this.settings.enabled;
